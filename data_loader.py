@@ -21,7 +21,7 @@ class NewsDataset(Dataset):
         
     def __getitem__(self, index):
         sequence = self.documents[index].split()
-        sequence = [self.word2ind[word] for word in sequence[:self.max_len]]
+        sequence = [self.word2ind[word] if word in self.word2ind else self.word2ind['OOV'] for word in sequence[:self.max_len]]
         sample = {'sequence': torch.tensor(sequence), 'label': self.labels[index]}
         return sample
     
