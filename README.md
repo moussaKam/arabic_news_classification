@@ -12,3 +12,7 @@ These documents are classed in 5 categories:
 * أخبار فنبة
 
 The idea is to report at the end the accuracy of each model and to examine the performance of the SOTA in text classification task over the time.
+
+Models implemented (yet):
+* Logistic Regression + Tf-Idf features
+* Simple Neural Network model from [fastText](https://arxiv.org/pdf/1607.01759.pdf)
